@@ -1,0 +1,72 @@
+ body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url('https://img.freepik.com/premium-photo/colorful-music-notes-background-with-sheet-music-disc-treble-clef-illustration-ai-generative_118124-13529.jpg');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      color: white;
+      margin-bottom: 20px;
+    }
+	
+	.username{
+		color: orange;
+	}
+    .non-premium a,
+    .premium table {
+      margin-top: 20px;
+    }
+
+    .non-premium a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .non-premium a:hover {
+      background-color: #2980b9;
+    }
+
+    .premium table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    .premium th, .premium td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .premium th {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    .premium td {
+      background-color: #fff;
+      color: #333;
+    }
+
+    .premium audio source {
+      width: 100%;
+    }
+    .non-premium a:hover {
+      background-color: orange; 
+       
+    }

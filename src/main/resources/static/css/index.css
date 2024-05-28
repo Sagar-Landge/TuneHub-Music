@@ -1,0 +1,121 @@
+ body {
+      font-family: 'Arial', sans-serif;
+      font-size:x-large;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+       background-image: url('/images/10971539.jpg');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;	
+      background-attachment:fixed;
+       
+    }
+    img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    border-radius: 50%;
+}
+ .curved-text {
+ 
+            width: 300px; /* Adjust as needed */
+            height: 200px; /* Adjust as needed */
+            margin: 0 auto;
+            display: block;
+            font-weight: bold;
+            font-style: italic;
+           text-shadow: 4px 4px 0 #ffff80, 6px 6px 0 white, 8px 8px 0 green;
+           z-index: -1;
+    font-weight: bold;
+    color:linear-gradient(90deg, green, #ff6a00);
+    position: relative;
+
+            
+        }
+        .curved-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: linear-gradient(90deg, green, #ff6a00);
+    z-index: -1;
+}
+
+.curved-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: linear-gradient(90deg, green, #ff6a00);
+    z-index: -2;
+}
+.c1{
+	margin-left: 500px;
+	margin-bottom: 70px;
+}
+    .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+  
+    a {
+      display: inline-block;
+      margin: 10px;
+      padding: 30px 50px;
+      text-decoration: none;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+     
+      transition: background 0.5s, box-shadow 0.5s;
+    }
+    
+   .shining-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    transform: rotate(45deg);
+    transition: opacity 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.shining-button:hover::before {
+    opacity: 1;
+    top: -50%;
+    left: 100%;
+    transition: opacity 0.2s, top 10s, left 1s;
+  
+}
+
+
+    a:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    }
+     h2 {
+      margin-bottom: 50px;
+      color:olive;
+      font-style: oblique; 
+    }
+
+    @media (max-width: 600px) {
+      a {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }

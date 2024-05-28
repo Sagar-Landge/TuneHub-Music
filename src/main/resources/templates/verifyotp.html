@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+    <link rel="stylesheet" href="/css/login.css" th:href="@{/css/login.css}">
+
+</head>
+<body>
+<div class="login-container" style="width:400px">
+<div th:unless="${success}" class="non-success">
+<div style="color:red" class="alert alert-succes m-3 " role="alert">You have Entered wrong OTP  </div>
+
+<form action="verify-otp" method="post">
+  <div class="form-group" >
+<input required type="text" name="otp" placeholder="Enter OTP"/>
+  </div>
+  </div>
+
+   
+  
+ <button type="submit">Verify</button>
+
+</form>
+</div>
+
+<div th:if="${success}" class="success">
+<div style="color:green" class="alert alert-succes m-3 " role="alert">OTP Sent Successfully... </div>
+
+<!-- message  box -->
+<!--
+<div th:if="${session.message}" class="container">
+<div class="alert alert-danger my-2 text-center" role="alert">
+<span th:text="$(session.message}"></span>
+</div>
+<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+</div> -->
+
+
+<form action="verify-otp" method="post">
+  <div class="form-group" >
+<input required type="text" name="otp" placeholder="Enter OTP"/>
+  </div>
+
+   
+  
+ <button type="submit">Verify</button>
+
+</form>
+  </div>
+   </div>
+</body>
+</html>

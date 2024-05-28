@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Playlists</title>
+        <link rel="stylesheet" href="/css/deleteplaylist.css" th:href="@{/css/deleteplaylist.css}">
+    
+</head>
+<body>
+    
+
+    <form th:action="@{/delete}" method="post">
+        <label>Select playlists to delete:</label>
+        
+        <!-- Assuming playlists is a list of Playlist objects from the controller -->
+        <div th:each="playlist : ${playlists}">
+            <label>
+                <input type="checkbox" th:name="selectedIds" th:value="${playlist.id}"> 
+                <span th:text="${playlist.name}"></span>
+            </label>
+            <br>
+        </div>
+        
+        <button type="submit">Delete Selected Playlists</button>
+    </form>
+</body>
+</html>

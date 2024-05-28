@@ -1,0 +1,78 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+       background-image: url('https://img.freepik.com/premium-photo/colorful-music-notes-background-with-sheet-music-disc-treble-clef-illustration-ai-generative_118124-13529.jpg');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Form styles */
+form {
+	     background-color: rgba(255, 200, 200, 0.6);
+	
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive styles using media queries */
+@media screen and (max-width: 600px) {
+    /* Adjust styles for small screens */
+    .container {
+        width: 90%;
+    }
+
+    form {
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Further adjustments for extra small screens */
+    form {
+        padding: 15px;
+    }
+}

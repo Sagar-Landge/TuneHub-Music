@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/register.css" th:href="@{/css/register.css}">
+
+</head>
+<body>
+<form action="registration" method="post">
+<img src="/images/logo-white.png">
+<h1>Registration Page</h1>
+<b><label>User name : </label>
+<input required type="text" name="username"/>
+
+<label>Email : </label>
+<input required type="email" name="email"/>
+<br>
+<label>Password : </label>
+<input required type="password" name="password"/>
+
+ <label required>Gender:
+            <div class="inline-options">
+                <label class="custom-radio">Male
+                    <input type="radio" name="gender" value="male"/>
+                    <span class="radio-mark"></span>
+                </label>
+                <label class="custom-radio">Female
+                    <input type="radio" name="gender" value="female"/>
+                    <span class="radio-mark"></span>
+                </label>
+                <label class="custom-radio">Other
+                    <input type="radio" name="gender" value="other"/>
+                    <span class="radio-mark"></span>
+                </label>
+            </div>
+        </label>
+        <label>Role:
+            <div class="inline-options">
+                <label class="custom-radio">Admin
+                    <input type="radio" name="role" value="admin"/>
+                    <span class="radio-mark"></span>
+                </label>
+                <label class="custom-radio">Customer
+                    <input type="radio" name="role" value="custmer"/>
+                    <span class="radio-mark"></span>
+                </label>
+            </div>
+        </label>
+<label>Address : </label>
+<textarea name="address"></textarea>
+
+<button type="submit" class="btn btn-secondary btn-sm">Register</button>
+
+</b>
+</form>
+</body>
+</html>
